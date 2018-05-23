@@ -1,4 +1,4 @@
-#!/usr/bin/pythonConda
+#!/usr/bin/python
 
 #from udacityplots import *
 import warnings

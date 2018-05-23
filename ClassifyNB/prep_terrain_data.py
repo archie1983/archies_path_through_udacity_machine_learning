@@ -1,4 +1,4 @@
-#!/usr/bin/pythonConda
+#!/usr/bin/python
 import random
 
 
