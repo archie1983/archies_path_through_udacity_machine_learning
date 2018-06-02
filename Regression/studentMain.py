@@ -20,6 +20,8 @@ reg = studentReg(ages_train, net_worths_train)
 plt.clf()
 plt.scatter(ages_train, net_worths_train, color="b", label="train data")
 plt.scatter(ages_test, net_worths_test, color="r", label="test data")
+#print ages_test
+#reg.predict(ages_test)
 plt.plot(ages_test, reg.predict(ages_test), color="black")
 plt.legend(loc=2)
 plt.xlabel("ages")
