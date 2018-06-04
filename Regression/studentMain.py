@@ -16,6 +16,14 @@ ages_train, ages_test, net_worths_train, net_worths_test = ageNetWorthData()
 
 reg = studentReg(ages_train, net_worths_train)
 
+print "Archie's net worth prediction: ",reg.predict([[35]])
+print "slope:",reg.coef_
+print "intercept:",reg.intercept_
+print "\n ########### stats on test dataset\n"
+print "r-squared score: ", reg.score(ages_test, net_worths_test)
+
+print "\n ########### stats on training dataset\n"
+print "r-squared score: ", reg.score(ages_train, net_worths_train)
 
 plt.clf()
 plt.scatter(ages_train, net_worths_train, color="b", label="train data")
@@ -29,4 +37,4 @@ plt.ylabel("net worths")
 
 
 plt.savefig("test.png")
-output_image("test.png", "png", open("test.png", "rb").read())
+#output_image("test.png", "png", open("test.png", "rb").read())
