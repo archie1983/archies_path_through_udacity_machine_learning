@@ -22,4 +22,10 @@ def featureScaling(arr):
 data = [115, 140, 175]
 print featureScaling(data)
 
-
+# now let's achieve the same thing with the sklearn library
+import numpy
+from sklearn.preprocessing import MinMaxScaler
+mms = MinMaxScaler()
+weights = numpy.array([[115.0], [140.0], [175.0]])
+rescaled_weight = mms.fit_transform(weights)
+print "skelarn.MinMaxScaler:",rescaled_weight
