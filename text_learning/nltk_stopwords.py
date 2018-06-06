@@ -4,3 +4,8 @@
 from nltk.corpus import stopwords
 sw = stopwords.words("english")
 print "number of stopwords in english: ",len(sw),". 10th one: ",sw[10]
+
+# trying out a stemmer
+from nltk.stem.snowball import SnowballStemmer
+stemmer = SnowballStemmer("english")
+print "stem for 'responsiveness': ",stemmer.stem("responsiveness")
